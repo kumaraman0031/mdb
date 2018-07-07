@@ -1,0 +1,100 @@
+/* colors */
+$primary-color : #4285f4;
+$white-color : #fff;
+$grey-color : #f1f0f0;;
+
+//btn border
+$btn-boreder-md:30px;
+
+
+//background
+.bg-grey{
+	background: $grey-color;
+}.bg-primary{
+	background: $primary-color !important;
+	color: $white-color;
+}
+
+/* nav */
+nav{
+	&#main-nav{
+		background: $white-color !important;
+		ul{
+			li{
+				border-radius: 30px;
+    			padding: 0 5px;
+				overflow: hidden;
+				cursor: pointer;
+				&.active{
+					background: $primary-color;
+					color: $white-color;
+					a{
+						color: $white-color;
+						padding-left: 20px;
+    					padding-right: 20px;
+					}
+				}
+				&:focus{
+					outline: none;
+				}
+				a{}
+			}
+		}
+	}
+}
+
+/* margins */
+.mt-130{
+	margin-top: 130px;
+}
+/* positions */
+.p-relative{
+	position: relative;
+}
+/* parallax */
+.parallax { 
+    height: 500px; 
+    background-attachment: fixed !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+/* overlay */
+.overlay-b:before {
+	top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000075;
+    float: left;
+    content: "";
+}
+/* grid,section alignment */
+section {
+	&.section{
+		padding: 60px 0;
+	}
+	form{
+		&.homeform{
+			.col-md-6.col-sm-12{
+			float: left;
+			}
+		}
+	}
+}
+.dark{
+	color:$white-color;
+}
+//scrollbar
+body::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
+  outline: 1px solid slategrey;
+}
