@@ -3,6 +3,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -29,7 +30,8 @@ const routes:Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-	RouterModule.forRoot(routes),
+  RouterModule.forRoot(routes),
+  HttpClientModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
     HttpModule,
