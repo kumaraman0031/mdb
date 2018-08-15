@@ -60,16 +60,18 @@ nav{
     background-size: cover !important;
 }
 /* overlay */
-.overlay-b:before {
-	top: 0;
-    position: absolute;
+.overlay-f {
     width: 100%;
     height: 100%;
-    background: #00000075;
-    float: left;
-    content: "";
+    background: rgba(0, 0, 0, 0.45);
 }
 /* grid,section alignment */
+/* qa fixed */
+.qa-fixed {
+    position: fixed;
+    width: 100%;
+}
+/*qa fixed end */
 section {
 	&.section{
 		padding: 60px 0;
