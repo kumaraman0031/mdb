@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { CollapseDirective } from '../typescripts/free/collapse/collapse.directive';
+import { Component, ViewChildren, AfterViewInit, OnInit } from '@angular/core';
 import { ProductsService } from '../products.service';
 import { Observable } from 'rxjs';
 
@@ -23,7 +24,6 @@ export class QaComponent implements OnInit {
 			{
 			this.myCounter = this.myCounter - num;
 		}
-	
   }
   
   Rows$: Object;
@@ -34,6 +34,13 @@ export class QaComponent implements OnInit {
     this.data.getProducts().subscribe(
       data => this.Rows$ = data 
     );
+  }
+  @ViewChildren(CollapseDirective) collapses: CollapseDirective[];
+
+  ngAfterViewInit() {
+    this.collapses.forEach((collapse: CollapseDirective) => {
+      collapse.show();
+    });
   }
 
 }
