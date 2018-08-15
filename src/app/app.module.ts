@@ -30,7 +30,7 @@ const routes:Routes = [
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-  RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes, { useHash: true }),
   HttpClientModule,
     MDBBootstrapModule.forRoot(),
     FormsModule,
